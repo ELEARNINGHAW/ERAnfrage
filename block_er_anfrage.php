@@ -5,8 +5,9 @@ class block_er_anfrage   extends block_base
 	
     function init() 
     {
-       if   ( $_SERVER[ 'SERVER_NAME' ]  == 'localhost' )   { $this->srvpath = 'http://localhost/haw/er_anfrage.NEW/index.php';                       /* Dev-Server */   }  
-       else                                                {  $this->srvpath = 'http://lernserver.el.haw-hamburg.de/haw/er_anfrage.NEW/index.php';    /* Live-Server */  }  
+       if   ( isset( $_SERVER[ 'SERVER_NAME' ] ) AND ( $_SERVER[ 'SERVER_NAME' ] )   == 'localhost' )   
+            { $this->srvpath = 'http://localhost/haw/er_anfrage.NEW/index.php';                       /* Dev-Server */   }  
+       else { $this->srvpath = 'http://lernserver.el.haw-hamburg.de/haw/er_anfrage.NEW/index.php';    /* Live-Server */  }  
 	   
        # $this->srvpath = 'http://localhost/haw/er_anfrage/index.php';
 	   
