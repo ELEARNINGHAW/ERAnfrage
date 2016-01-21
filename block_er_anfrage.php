@@ -15,14 +15,14 @@ class block_er_anfrage   extends block_base
 
     function hide_header() 	            {  return false;  }
     function instance_allow_multiple()  {  return false;  }
-    function has_config()               {  return true;   }	
+    function has_config()               {  return false;   }	
 
     function applicable_formats() 
     {
       return array
       (
         'all' => true ,
-        'site-index' => false
+        'course*' => false
        );
     }
     function get_content() 

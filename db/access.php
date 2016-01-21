@@ -22,70 +22,75 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die("ARGH!!");
-
-$capabilities = array(
-        'block/er_anfrage:addinstance' => array(
-                'captype'      => 'read',
-                'contextlevel' => CONTEXT_BLOCK,
-                'archetypes' => array(
-            'guest'          => CAP_PREVENT,
-            'student'        => CAP_PREVENT,
-            'teacher'        => CAP_PREVENT,
-            'editingteacher' => CAP_PREVENT,
-            'coursecreator'  => CAP_PREVENT,
-            'manager'        => CAP_ALLOW
-                ),
-                'clonepermissionsfrom' => 'moodle/site:manageblocks'
-        ),
-        'block/er_anfrage:myaddinstance' => array(
-                'riskbitmask'  => RISK_PERSONAL,
-                'captype'      => 'read',
-                'contextlevel' => CONTEXT_COURSE,
-                'archetypes'   => array(
-            'guest'          => CAP_PREVENT,
-            'student'        => CAP_PREVENT,
-            'teacher'        => CAP_PREVENT,
-            'editingteacher' => CAP_PREVENT,
-            'coursecreator'  => CAP_PREVENT,
-            'manager'        => CAP_PREVENT
-             ),
-                'clonepermissionsfrom' => 'moodle/my:manageblocks'
-        ),
-
-        'block/er_anfrage:view' => array(
-                'riskbitmask'  => RISK_PERSONAL,
-                'captype'      => 'read',
-                'contextlevel' => CONTEXT_COURSE,
-                'archetypes'   => array(
-            'guest'          => CAP_PREVENT,
-            'student'        => CAP_PREVENT,
-            'teacher'        => CAP_ALLOW,
-            'editingteacher' => CAP_ALLOW,
-            'coursecreator'  => CAP_ALLOW,
-            'manager'        => CAP_ALLOW
-             ),
-            'clonepermissionsfrom' => 'moodle/my:manageblocks'
-        ),
+defined('MOODLE_INTERNAL') || die();
 
 
-        'block/er_anfrage:edit' => array(
-                'riskbitmask'  => RISK_PERSONAL,
-                'captype'      => 'write',
-                'contextlevel' => CONTEXT_COURSE,
-                'archetypes'   => array(
-            'guest'          => CAP_PREVENT,
-            'student'        => CAP_PREVENT,
-            'teacher'        => CAP_PREVENT,
-            'editingteacher' => CAP_PREVENT,
-            'coursecreator'  => CAP_PREVENT,
-            'manager'        => CAP_PREVENT
-             ),
-            'clonepermissionsfrom' => 'moodle/my:manageblocks'
-        ),
+$capabilities = array
+(
+  'block/er_anfrage:addinstance' => array
+  (
+    'captype'                     => 'read',
+    'contextlevel'                => CONTEXT_BLOCK,
+    'archetypes'                  => array
+    (
+      'guest'                       => CAP_PREVENT,
+      'student'                     => CAP_PREVENT,
+      'teacher'                     => CAP_PREVENT,
+      'editingteacher'              => CAP_PREVENT,
+      'coursecreator'               => CAP_PREVENT,
+      'manager'                     => CAP_ALLOW
+    ),
+    'clonepermissionsfrom' => 'moodle/site:manageblocks'
+  ),
+  
+  'block/er_anfrage:myaddinstance' => array
+  (
+    'riskbitmask'    => RISK_PERSONAL,
+    'captype'        => 'read',
+    'contextlevel'   => CONTEXT_COURSE,
+    'archetypes'     => array
+    (
+      'guest'          => CAP_PREVENT,
+      'student'        => CAP_PREVENT,
+      'teacher'        => CAP_PREVENT,
+      'editingteacher' => CAP_PREVENT,
+      'coursecreator'  => CAP_PREVENT,
+      'manager'        => CAP_PREVENT
+    ),
+    'clonepermissionsfrom' => 'moodle/my:manageblocks'
+  ),
 
-       
- 
+  'block/er_anfrage:view' => array
+  (
+    'riskbitmask'    => RISK_PERSONAL,
+    'captype'        => 'read',
+    'contextlevel'   => CONTEXT_COURSE,
+    'archetypes'     => array
+    (
+      'guest'          => CAP_PREVENT,
+      'student'        => CAP_PREVENT,
+      'teacher'        => CAP_ALLOW,
+      'editingteacher' => CAP_ALLOW,
+      'coursecreator'  => CAP_ALLOW,
+      'manager'        => CAP_ALLOW
+     ),
+     'clonepermissionsfrom' => 'moodle/my:manageblocks'
+   ),
+
+  'block/er_anfrage:edit' => array
+  (
+     'riskbitmask'  => RISK_PERSONAL,
+     'captype'      => 'write',
+     'contextlevel' => CONTEXT_COURSE,
+     'archetypes'   => array
+     (
+       'guest'          => CAP_PREVENT,
+       'student'        => CAP_PREVENT,
+       'teacher'        => CAP_PREVENT,
+       'editingteacher' => CAP_PREVENT,
+       'coursecreator'  => CAP_PREVENT,
+       'manager'        => CAP_PREVENT
+      ),
+      'clonepermissionsfrom' => 'moodle/my:manageblocks'
+     ),
 );
-
-
