@@ -50,10 +50,11 @@ class block_er_anfrage   extends block_base
         
         /* Ermittelt, ob der aktuelle Kurs in einer Kurskategorie liegt, die in der Kurskategorieliste vorkommt */
         $visibleCourseCat = array(); 
+        
         if (! empty($this->config->text))  {  $visibleCourseCat = explode("," , $this->config->text);  } # Nur in Kursen, aus einer der Kurskategorien, die in der Block-Config definiert wurden 
         else                               {  $visibleCourseCat = array();                             } # wird dieser Block auch angezeigt
   
-        #if ( $isEditor && in_array( $COURSE->category  , $visibleCourseCat ) || $currendSideIsMyEMIL)
+        if ( $isEditor && in_array( $COURSE->category  , $visibleCourseCat ) || $currendSideIsMyEMIL)
         {                      
         if ( $currendSideIsMyEMIL ) { $cid =  '-1'; }
         else                        { $cid =  $COURSE->id; } 

@@ -1,5 +1,5 @@
 <?php
-$plugin->version   = 2016012102;           // The current module version (Date: YYYYMMDDXX)
+$plugin->version   = 2016012800;           // The current module version (Date: YYYYMMDDXX)
 $plugin->requires  = 2010090500;           // Requires this Moodle version
 $plugin->component = 'block_er_anfrage';    // Full name of the plugin (used for diagnostics)
 $plugin->cron      = 0;
