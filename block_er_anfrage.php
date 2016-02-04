@@ -110,7 +110,7 @@ class block_er_anfrage   extends block_base
 		$con  .= '</head>';
 
 		$contentA = "";               
-		if ( ( !$currendSideIsMyEMIL  ) && $isEditor && $isNoStudi )                        /* Block erscheint nur bei: */
+		if ( ( !$currendSideIsMyEMIL  ) && $isEditor )                        /* Block erscheint nur bei: */
 		{
 		$contentA .= "<iframe    scrolling    = \"auto\"  
 						marginheight          = \"0\" 
