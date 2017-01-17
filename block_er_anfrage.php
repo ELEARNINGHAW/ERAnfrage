@@ -44,7 +44,7 @@ class block_er_anfrage   extends block_base
           else if ( stristr( $USER->phone2, 'Mitarbeiter') || stristr( $USER->phone2, 'Externer'  ) )  { $isNoStudi = 1; }
         }
 
-        /* Ermittelt ob die aktuelle Seite 'meine Startseite' ist */
+        /* Ermittelt ob die aktuelle Seite 'meine Startseite' ist  */
         if  (  strpos($_SERVER['SCRIPT_FILENAME'], '/my/') != '' ||   strpos($_SERVER['SCRIPT_FILENAME'], '\my\\') != '' )  { $currendSideIsMyEMIL = true;   $frameHeight = 120; }
         else                                                                                                                { $currendSideIsMyEMIL = false;  $frameHeight = 250; }
         
@@ -58,7 +58,7 @@ class block_er_anfrage   extends block_base
         {                      
         if ( $currendSideIsMyEMIL ) { $cid =  '-1'; }
         else                        { $cid =  $COURSE->id; } 
-          
+           
 		if ( !isset( $COURSE->id        ) ) { $COURSE->id        =  ''; }
 		if ( !isset( $COURSE->category  ) ) { $COURSE->category  =  ''; }
 		if ( !isset( $COURSE->sortorder ) ) { $COURSE->sortorder =  ''; }
